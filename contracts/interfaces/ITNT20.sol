@@ -2,7 +2,7 @@
 pragma solidity >=0.8.0;
 
 interface ITNT20 {
-    
+
     function totalSupply() external view returns (uint256);
 
     function balanceOf(address account) external view returns (uint256);
@@ -10,6 +10,8 @@ interface ITNT20 {
     function transfer(address recipient, uint256 amount) external returns (bool);
 
     function allowance(address owner, address spender) external view returns (uint256);
+
+    function decimals() external view returns (uint8);
 
     function approve(address spender, uint256 amount) external returns (bool);
 
@@ -20,5 +22,5 @@ interface ITNT20 {
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     event Approval(address indexed owner, address indexed spender, uint256 value);
-    
+
 }
