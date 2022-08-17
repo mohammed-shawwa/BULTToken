@@ -1,0 +1,16 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/build
+.env
+/Build_test
+/.openzeppelin
+/build-ganache
+/build-bsc-testnet
+/build-theta-mainnet
+/build-theta-testnet
+truffle-config.js
+package-lock.json
+.idea
+.secret

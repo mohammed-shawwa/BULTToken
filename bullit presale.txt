@@ -1,0 +1,35 @@
+contract = await Presale.deployed();
+
+token = await contract.addTokenAddress('0xfA7222085f379eEbD975D74DA861E9F8CF7FDd36',{from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+
+token = await contract.addTokenAddress('0xC90E61aE5F83A890A933E44B8D76E4Fe6E0eA93c',{from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+
+token = await contract.addTokenAddress('0xd9145CCE52D386f254917e481eB44e9943F39138',{from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+
+
+duration = await contract.getDuration();
+duration = await contract.getDuration({from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+await contract.setDuration(1,{from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+
+	
+saleEndDate = await contract.getSaleEndDate({from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+minimumDeposite = await contract.getMinimumDeposite({from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+maximumDeposite = await contract.getMaximumDeposite({from:'0xEb240dB9d9bc6FDB6520161D076e3DC0EF43d7Aa'});
+
+
+await contract.addClaimer('0x3e346724fb4278f53720E9bB90B1935D98f92367');
+
+await contract.addingClaimer('0x808dd31d5F44Fe17ad175d1bA95244c3363A6478' , {from:'0x3e346724fb4278f53720E9bB90B1935D98f92367'});
+
+await contract.addingClaimer('0x22512A5662Af1B15A7F630df0780A1Cf5fc1Fd3D');
+
+await contract.unsuspendClaimer('0x808dd31d5F44Fe17ad175d1bA95244c3363A6478');
+
+await contract.suspendClaimer('0x808dd31d5F44Fe17ad175d1bA95244c3363A6478');
+
+
+claimers = await contract.getAllClaimers();
+
+
+claimer = await contract.getClaimer();
+
